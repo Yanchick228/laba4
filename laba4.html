@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>laba4</title>
+</head>
+<body>
+<table border="2">
+</table>
+
+<script>
+class cool{
+num1;
+num2;
+
+constructor(num1, num2){
+this.num1 = num1;
+this.num2 = num2;
+}
+
+minus(){
+return this.num1-this.num2
+}
+plus(){
+return this.num1+this.num2
+}
+substract(){
+return this.num1/this.num2
+}
+multiple(){
+return this.num1*this.num2
+}}
+
+let arr = [];
+let num = prompt('Введите количество объектов')
+for (let i = 0; i < num; i++){
+arr[i] = new cool(Number(prompt(`Введите первое число объекта №${i+1}`)), Number(prompt(`Введите второе число объекта №${i+1}`)));
+}
+
+let table = document.getElementsByTagName('table')[0];
+console.log(table);
+for (let key in arr){
+	table.innerHTML += `<td>index=${key}</td> <td>nums=${arr[key].num1}, ${arr[key].num2}</td> <td>minus()=${arr[key].minus()}</td> <td>plus()=${arr[key].plus()}</td> <td>substract()=${arr[key].substract()}</td> <td>multiple()=${arr[key].multiple()}</td>`;
+}
+
+</script>
+</body>
+</html>
